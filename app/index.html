@@ -10,12 +10,12 @@
     <header class="angular-training-header">
         AngularJS Training
     </header>
+
     <main class="angular-training-main" ng-controller="AngularTrainingController">
         <h2>Search: <input ng-model="query"></h2>
-        <!--<h2>Search: <input ng-model="query" ng-model-options="{ debounce: 500 }"></h2>-->
 
-        <li ng-repeat="player in footballPlayers | filter:query">
-            <p>{{player}}</p>
+        <li ng-repeat="repo in gitRepos | filter: {name: query}">
+            <a href={{repo.html_url}}>{{repo.name}}</a>
         </li>
     </main>
 
