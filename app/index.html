@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>AngularJS Training</title>
   <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-route/angular-route.js"></script>
   <link rel="stylesheet" href="./css/index.css"/>
 </head>
 <body>
@@ -11,14 +12,9 @@
         AngularJS Training
     </header>
 
-    <main class="angular-training-main" ng-controller="AngularTrainingController">
-        <h2>Search: <input ng-model="query"></h2>
+    <main class="angular-training-main" ng-view></main>
 
-        <li ng-repeat="repo in gitRepos | filter: {name: query}">
-            <a href={{repo.html_url}}>{{repo.name}}</a>
-        </li>
-    </main>
-
-    <script src="js/controller.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
 </body>
 </html>

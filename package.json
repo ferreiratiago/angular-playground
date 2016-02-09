@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "description": "A tutorial for an AngularJS application",
     "license": "MIT",
-        "dependencies": {
+    "dependencies": {
         "angular": "^1.4.9",
         "angular-route": "^1.5.0"
     },
