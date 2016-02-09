@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="angularTraining">
 <head>
   <meta charset="utf-8">
   <title>AngularJS Training</title>
@@ -10,8 +10,13 @@
     <header class="angular-training-header">
         AngularJS Training
     </header>
-    <main class="angular-training-main">
-        I'm a static page :(
+
+    <main class="angular-training-main" ng-controller="AngularTrainingController">
+        <li ng-repeat="player in footballPlayers">
+            <p>{{player}}</p>
+        </li>
     </main>
+
+    <script src="js/controller.js"></script>
 </body>
 </html>
