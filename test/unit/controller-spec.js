@@ -27,7 +27,3 @@ describe('ReposListCtrl', function(){
         }]);
     });
 });
-
-describe('ReposDetailsCtrl', function(){
-    // ...
-});

@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>AngularJS Training</title>
   <script src="../node_modules/angular/angular.js"></script>
-  <script src="../node_modules/angular-route/angular-route.js"></script>
   <link rel="stylesheet" href="./css/index.css"/>
 </head>
 <body>
@@ -12,9 +11,12 @@
         AngularJS Training
     </header>
 
-    <main class="angular-training-main" ng-view></main>
+    <main class="angular-training-main" ng-controller="ReposListCtrl">
+        <git-repo repos="gitRepos"></git-repo>
+    </main>
 
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/directive.js"></script>
 </body>
 </html>

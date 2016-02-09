@@ -1,5 +1,3 @@
-<h2>Search: <input ng-model="query"></h2>
-
-<li ng-repeat="repo in gitRepos | filter: {name: query}">
+<li ng-repeat="repo in repos">
     <a href='#/repo/{{repo.name}}'>{{repo.name}}</a>
 </li>
