@@ -1,23 +1,30 @@
 describe('AngularTraining App', function() {
 
-    describe('Git repos list view', function() {
+    describe('Repos List', function() {
 
-        beforeEach(function() {
-          browser.get('app/index.html');
+        it('should redirect index.html to index.html#/repos', function () {
+            browser.get('app/index.html');
+            browser.getLocationAbsUrl().then(function(url) {
+                expect(url).toEqual('/repos');
+              });
         });
 
         it('should filter the list as the user types into the search box', function() {
-            var repos = element.all(by.repeater('repo in gitRepos'));
-            var query = element(by.model('query'));
+            // ...
+        });
+    })
 
-            expect(repos.count()).toBeGreaterThan(10);
+    describe('Repo Details', function () {
 
-            query.sendKeys('dart');
-            expect(repos.count()).toBeGreaterThan(2);
+        beforeEach(function () {
+            browser.get('app/#/repo/angular');
+        });
 
-            query.clear();
-            query.sendKeys('phonecat');
-            expect(repos.count()).toBe(1);
+        it('should list the repo branches', function() {
+
+            var branches = element.all(by.repeater('branch in branches'));
+            expect(branches.count()).toBeGreaterThan(10);
+
         });
     });
 });

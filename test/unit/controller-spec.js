@@ -1,4 +1,4 @@
-describe('AngularTrainingController', function(){
+describe('ReposListCtrl', function(){
     var ctrl;
     var http;
     var scope;
@@ -14,7 +14,7 @@ describe('AngularTrainingController', function(){
             }]);
 
         scope = $rootScope.$new();
-        ctrl = $controller('AngularTrainingController', {$scope: scope});
+        ctrl = $controller('ReposListCtrl', {$scope: scope});
     }));
 
     it('should load the git repos from angular', function () {
@@ -26,4 +26,8 @@ describe('AngularTrainingController', function(){
             html_url: 'www.angular.io'
         }]);
     });
+});
+
+describe('ReposDetailsCtrl', function(){
+    // ...
 });
