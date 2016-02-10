@@ -36,12 +36,12 @@ To see if the app is running in the browser open a separate terminal and run:
 This will start a web service and run our application at [`http://localhost:9000/app/`](http://localhost:9000/app/).
 
 ### about the code
-```
+```html
 <html lang="en" ng-app>
 ```
 `ng-app` attribute represents the `ngApp` Angular directive used to flag the HTML element that is the *root element* of our application.
 
-```
+```html
  <script src="../node_modules/angular/angular.js"></script>
  ```
 This will download the `angular.js` script and register a callback that is executed by the browser when the containing HTML page is fully downloaded.
@@ -76,7 +76,7 @@ Reset our workspace to `step-2`:
 ### about the code
 #### ngApp
 #### view
-```
+```html
 <html ng-app="angularTraining">
 ```
 #### js
@@ -88,7 +88,7 @@ We now create our Angular app and name it (`angularTraining`). The `[]` that fol
 
 #### controller
 #### view
-```
+```html
 <html ng-app="angularTraining">
     <main ng-controller="AngularTrainingController">
 ```
@@ -98,6 +98,7 @@ We now create our Angular app and name it (`angularTraining`). The `[]` that fol
 app.controller('AngularTrainingController', function ($scope) {
     ...
 });
+```
 
 The data model is now instantiated within our controller `AngularTrainingController`.
 
@@ -108,7 +109,7 @@ It allow us to use data-binding (`{{ }}`) between the model and the view.
 The scope in Angular is crucial since its the the glue which allows the template, model and controller to work together.
 Angular uses the `scope` to keep models and views separate, but in sync.
 
-```
+
 ## step-3 - filtering repeaters
 Reset our workspace to `step-3`:
 ```
@@ -116,7 +117,7 @@ Reset our workspace to `step-3`:
 ```
 
 #### view
-```
+```html
 <input ng-model="query">
 
 <li ng-repeat="player in footballPlayers | filter:query">
@@ -147,7 +148,7 @@ Reset our workspace to `step-5`:
 
 ### about the code
 #### html
-```
+```html
 <main class="angular-training-main" ng-view></main>
 ```
 
@@ -178,7 +179,7 @@ Reset our workspace to `step-6`:
 
 ### about the code
 #### html
-```
+```html
 <git-repo repos="gitRepos"></git-repo>
 ```
 
